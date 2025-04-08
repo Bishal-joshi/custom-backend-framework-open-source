@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "declaration": true,  // Generate .d.ts files
+    "outDir": "./dist",  // Specifies the output directory for the compiled files
+    "moduleResolution": "node",  // Use Node.js module resolution strategy
+    "rootDir": "./src",  // Specifies the root directory of input files
+  },
+  "include": [
+    "src/**/*"  // Ensures TypeScript compiles all files in the src folder
+  ],
+  "exclude": [
+    "node_modules"  // Excludes the node_modules folder from compilation
+  ]
+}

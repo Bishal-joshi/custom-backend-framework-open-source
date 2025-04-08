@@ -1,0 +1,31 @@
+{
+  "name": "my-custom-backend-framework",
+  "type": "commonjs",
+  "version": "1.0.16",
+  "dependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.0",
+    "express": "^5.1.0",
+    "glob": "^10.4.5",
+    "lodash": "^4.17.21",
+    "pg": "^8.14.1",
+    "reflect-metadata": "^0.2.2"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts", 
+  "bin": {
+    "generate-migration": "dist/migrationHandler/generate.script.js",
+    "run-migration": "dist/migrationHandler/apply.script.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "generate:migration":"node dist/migrationHandler/generate.script.js",
+    "run:migration":"node dist/migrationHandler/apply.script.js"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.11"
+  },
+  "author": {"name": "Bishal Joshi","email": "bishaljoshi8858@gmail.com"}
+}
